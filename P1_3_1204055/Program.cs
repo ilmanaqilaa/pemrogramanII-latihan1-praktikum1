@@ -18,13 +18,28 @@ namespace P1_3_1204055
             Console.WriteLine("");
 
             int ayam = jmlhAyam;
-            int goin = jmlhAyam;
-
-                for (int i = ayam; i > 1; i--)
+            
+            if(ayam > 10) {
+                Console.Write("Anak ayam harus 1-10 kawan. Terimakasih :)\n");
+            }
+            else if (ayam < 1)
+            {
+                Console.Write("Anak ayam harus 1-10 kawan. Terimakasih :)\n");
+            }
+            else { 
+                for (int i = ayam; i > 0; i--)
                 {
-                    Console.Write("Anak ayam turunlah " + i + ", mati satu tinggalah " + (i - 1) + "\n");
+                    if (i > 1)
+                    {
+                        Console.Write("Anak ayam turunlah " + i + ", mati satu tinggalah " + (i - 1) + "\n");
+                    }
+                    else if (i == 1)
+                    {
+                        Console.WriteLine("Anak ayam turunlah " + i + ", mati satu tinggalah induknya");
+                    }
                 }
-                    Console.Write("Anak ayam turunlah 1" + ", mati satu tinggalah induknya\n");
+            }
+
         }
     }
 }
